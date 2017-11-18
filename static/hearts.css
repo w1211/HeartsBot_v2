@@ -1,0 +1,46 @@
+@font-face {
+    font-family: raleway;
+    src: url("https://fonts.googleapis.com/css?family=Raleway");
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+.home {
+    background-image: url("hearts_bg.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 5em;
+    color: white;
+    margin-top: 2px;
+}
+
+.menu_button {
+    font-family: 'Raleway', sans-serif;
+    background : white;
+    font-size:  16px;
+    display: list-item;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 5px;
+    margin: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.menu_button:hover {
+    background-color: black; /* Green */
+    color: white;
+}
+
+
+.menu {
+    width: 300px;
+    align:center;
+}
