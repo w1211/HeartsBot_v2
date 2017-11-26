@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/hearts.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Review Players</title>
+</head>
+<body class="main">
+    <div class="backing_layer">
+        <div>
+            <h1 class="title" style="color:red">Hearts</h1><h1 class="title">Bot</h1>
+        </div>
+        {% for u in users %}
+            <div class="userBox">
+                <div>
+                    <h2>{{ u.FirstName }} {{ u.LastName }}</h2>
+                </div>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td><p>Games Played</p></td>
+                        <td><p>{{ u.GamesPlayed }}</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Games Won</p></td>
+                        <td><p>{{ u.GamesWon }}</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Games Lost</p></td>
+                        <td><p>{{ u.GamesLost }}</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Total Points Acquired</p></td>
+                        <td><p>{{ u.TotalPoints }}</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

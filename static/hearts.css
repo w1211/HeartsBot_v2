@@ -7,18 +7,85 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
-.home {
+.main {
     background-image: url("hearts_bg.jpeg");
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
+.game {
+    background-image: url("felt.jpg");
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.backing_layer{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.home_backing_layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 h1 {
     font-size: 5em;
     color: white;
     margin-top: 2px;
+    text-shadow: 1px 1px 0 #000;
 }
 
 .menu_button {
@@ -30,6 +97,7 @@ h1 {
     padding: 15px 32px;
     border-radius: 5px;
     margin: 10px;
+    width: 200px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
@@ -39,8 +107,18 @@ h1 {
     color: white;
 }
 
+.title {
+    display:inline-block;
+}
 
 .menu {
     width: 300px;
     align:center;
+}
+
+.userBox {
+    background-color: white;
+    width: 300px;
+    margin: 45px;
+    display: inline-block;
 }
